@@ -1,0 +1,36 @@
+{
+    "name": "tag-parser",
+    "homepage": "https://github.com/khrome/tag-parser",
+    "version": "0.0.1-alpha",
+    "main": "tag-parser.js",
+    "description": "A utility for parsing text markup",
+    "keywords": [
+        "tag",
+        "parser",
+        "markup",
+        "html"
+    ],
+    "author": "Abbey Hawk Sparrow <@khrome> (http://patternweaver.com)",
+    "contributors": [],
+    "bugs": {
+        "url": "https://github.com/khrome/tag-parser/issues"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:khrome/tag-parser.git"
+    },
+    "dependencies": {
+        "prime": "*",
+        "prime-ext": "*"
+    },
+    "devDependencies": {
+        "mocha": "*",
+        "should": "*"
+    },
+    "optionalDependencies": {
+    },
+    "engines": {
+        "node": "*"
+    }
+}
