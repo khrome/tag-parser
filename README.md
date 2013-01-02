@@ -13,6 +13,7 @@ then, instantiate the object:
     var parser = new TagParser([environments]);
     
 where environments may contain:
+
 1. *name* : 
 2. *sentinels* : a list of the following mixed types:
     1. an array of 2 strings, the first being the 'open' sentinel, the second, 'close'.
