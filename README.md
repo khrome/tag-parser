@@ -66,9 +66,11 @@ which will produce:
             },
             {
                 type: 'tag',
-                text: 'body',
+                text: 'body onload="callReady()"',
                 name: 'body',
-                attributes: {},
+                attributes: {
+                    onload : 'callReady()'
+                },
                 children: [
                     {
                         type: 'tag',
