@@ -23,19 +23,21 @@ var TagParser = prime({
     parseTag: function(tag, results){
         if(!results) results = {};
         var position = tag.indexOf(' ');
-        var name = tag.substring(0, position)||tag;
+        var name = tag.substring(0, position) || tag;
         var remainder = tag.substring(position);
         var attributes = {};
         if(remainder && position != -1){
             var attributeStrings = string.splitHonoringQuotes(remainder, ' ', this.attributeDelimiters);
             array.forEach(attributeStrings, fn.bind(function(attr){
                 var parts = attr.split('=');
+                if(parts.length < 2) return;
                 if(array.contains(this.attributeDelimiters, parts[1][0])){ //quoted?
                     parts[1].substring(1, parts[1].length-1);
                 }
                 attributes[parts[0]] = parts[1];
             }, this));
-        }
+            results.parts = attributeStrings;
+        }else results.parts = [];
         results.name = name;
         results.attributes = attributes;
         return results;
