@@ -25,8 +25,9 @@ var EnvironmentParser = new prime({
     content : {},
     text : '',
     environments : [],
-    constructor : function(environments){
+    constructor : function(environments, onComplete){
         if(environments) this.setEnvironments(environments);
+        if(onComplete) this.onComplete = onComplete;
     },
     setEnvironments : function(environments){
         this.environments = environments;
@@ -81,6 +82,7 @@ var EnvironmentParser = new prime({
             }, this));
             if(!handled) this.text += xmlChars[job.lcv];
         }
+        if(this.onComplete) this.onComplete.apply(this);
         return this.tagStack;
     }
 });

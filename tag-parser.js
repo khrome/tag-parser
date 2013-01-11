@@ -9,8 +9,9 @@ var SimpleParser = require('./core');
 var TagParser = prime({
     inherits : SimpleParser,
     attributeDelimiters : ['"'],
-    constructor : function(opts){
+    constructor : function(opts, onComplete){
         this.setEnvironments(opts);
+        if(onComplete) this.onComplete = onComplete;
         this.on('parse', function(node){
             if(node.type == 'tag'){
                 var tag = this.parseTag(node.text);

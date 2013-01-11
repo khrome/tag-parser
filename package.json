@@ -1,7 +1,7 @@
 {
     "name": "tag-parser",
     "homepage": "https://github.com/khrome/tag-parser",
-    "version": "0.0.2-alpha",
+    "version": "0.0.3-alpha",
     "main": "tag-parser.js",
     "description": "A utility for parsing text markup",
     "keywords": [
